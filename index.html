@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<script>
+			function verificarPalindromo() {
+				cadena = document.getElementById('palabra').value;
+				if (cadena != '') {
+					const reserva = cadena.split('').reverse().join('');
+
+					if (reserva === cadena) {
+						console.log(cadena + ' es palindromo');
+						alert(cadena + ' es un palindromo!');
+					} else {
+						console.log(cadena + ' no es palindromo!');
+						alert(cadena + ' no es palindromo!');
+					}
+				}
+			}
+		</script>
+		<title>Ejercicio 2</title>
+	</head>
+	<body>
+		<label>Ingrese una palabra para saber si es un palindromo: </label>
+		<input id="palabra" type="text" />
+		<button onclick="verificarPalindromo()">Verificar palabra</button>
+	</body>
+</html>
